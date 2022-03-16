@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "239584378618",
+    "project_id": "collage-project-25c75",
+    "storage_bucket": "collage-project-25c75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239584378618:android:1c0cb6cdade74a408ad343",
+        "android_client_info": {
+          "package_name": "com.live.clg_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239584378618-vmt7snstpakillompntrm26kdic7419c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.live.clg_project",
+            "certificate_hash": "fa4ad293cc5b17de258140509b1afa081991d2f9"
+          }
+        },
+        {
+          "client_id": "239584378618-18l679tko52ouq56767nra5eec4hvp38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWBtxGmbcTLdxRPVNBCPH40_CSYQGKHUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239584378618-18l679tko52ouq56767nra5eec4hvp38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
