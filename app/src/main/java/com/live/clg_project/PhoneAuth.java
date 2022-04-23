@@ -53,13 +53,8 @@ public class PhoneAuth extends AppCompatActivity {
         verify=findViewById(R.id.login2);
         textEmergency=findViewById(R.id.textEmergency);
 
-        textEmergency.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(PhoneAuth.this, EmergencyActivity.class);
-                startActivity(intent);
-            }
-        });
+        String Mobile = getIntent().getStringExtra("Mobile");
+
 
 
 
