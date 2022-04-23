@@ -60,7 +60,7 @@ public class SplashActivity extends AppCompatActivity {
             else
             {
                 Intent intent;
-                intent = new Intent(SplashActivity.this, PhoneAuth0.class);
+                intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
