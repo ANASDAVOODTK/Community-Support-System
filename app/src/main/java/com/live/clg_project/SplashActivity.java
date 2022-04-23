@@ -53,14 +53,14 @@ public class SplashActivity extends AppCompatActivity {
             if(userId==null||userId.isEmpty())
             {
                 Intent intent;
-                intent = new Intent(SplashActivity.this, PhoneAuth.class);
+                intent = new Intent(SplashActivity.this, PhoneAuth0.class);
                 startActivity(intent);
                 finish();
             }
             else
             {
                 Intent intent;
-                intent = new Intent(SplashActivity.this, MainActivity.class);
+                intent = new Intent(SplashActivity.this, PhoneAuth0.class);
                 startActivity(intent);
                 finish();
             }
