@@ -159,7 +159,7 @@ public class PhoneAuth extends AppCompatActivity {
         imgGoOtp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+
                 String Otp = txtOtp.getText().toString();
                 verifyPhoneNumberWithCode(mVerificationId, Otp);
             }

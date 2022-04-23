@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 Intent intent;
-                intent = new Intent(MainActivity.this, PhoneAuth.class);
+                intent = new Intent(MainActivity.this, PhoneAuth0.class);
                 startActivity(intent);
                 finish();
             }
