@@ -3,8 +3,10 @@ package com.live.clg_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,7 +29,7 @@ public class PhoneAuth0 extends AppCompatActivity {
         txtFullName = findViewById(R.id.txtFullName);
         txtMobile = findViewById(R.id.txtMobile);
         imgGo = findViewById(R.id.imgGo);
-        textEmergency = findViewById(R.id.textEmergency);
+        textEmergency = findViewById(R.id.txtChangePhone);
 
 
         imgBack.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +54,15 @@ public class PhoneAuth0 extends AppCompatActivity {
                     Toast.makeText(PhoneAuth0.this, "Please Enter Your Mobile", Toast.LENGTH_SHORT).show();
                 }
                 else
+
                 {
+
+                    SharedPreferences sharedPref = PhoneAuth0.this.getPreferences(Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putString("Mobile", mobile);
+                    editor.apply();
+
+
                     Intent intent = new Intent(PhoneAuth0.this,PhoneAuth.class);
                     intent.putExtra("Mobile", mobile);
                     startActivity(intent);
