@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClgProject">
         <activity
+            android:name=".PhoneAuth0"
+            android:exported="false" />
+        <activity
             android:name=".AwarnessActivity"
             android:exported="false" />
         <activity
@@ -36,6 +39,10 @@
         <activity
             android:name=".PhoneAuth"
             android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
