@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainColor"
-    tools:context=".MessagingActivity">
+    tools:context=".ProfileActivity">
 
     <ImageView
         android:id="@+id/imgBack"
@@ -17,6 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_back" />
 
+    <ImageView
+        android:id="@+id/imgLogout"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logout" />
+
     <TextView
         android:id="@+id/txtlogin"
         android:layout_width="wrap_content"
@@ -24,11 +34,14 @@
         android:layout_marginStart="20sp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/montserrat_semi_bold"
-        android:text="Messages"
+        android:text="Profile"
         android:textColor="@color/white"
         android:textFontWeight="600"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imgBack"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
