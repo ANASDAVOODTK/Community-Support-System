@@ -166,7 +166,6 @@ public class PhoneAuth extends AppCompatActivity {
         });
 
         startPhoneNumberVerification("+91"+Mobile);
-        Toast.makeText(this, Mobile, Toast.LENGTH_SHORT).show();
         // [END phone_auth_callbacks]
     }
 
