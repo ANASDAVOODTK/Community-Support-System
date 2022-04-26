@@ -151,10 +151,16 @@
         android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="18dp"
         android:textAlignment="textStart"
+        app:icon="@drawable/ic_rarrow"
+        app:iconGravity="end"
+        app:iconSize="30dp"
+        app:iconTint="@color/mainColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </com.google.android.material.button.MaterialButton>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
