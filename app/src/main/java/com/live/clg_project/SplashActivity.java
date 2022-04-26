@@ -25,6 +25,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        Intent serviceIntent = new Intent(this,MqttBrokerService.class);
+        startService(serviceIntent);
         try
         {
             userId= FirebaseAuth.getInstance().getCurrentUser().getUid();
