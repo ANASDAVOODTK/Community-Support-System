@@ -225,10 +225,10 @@ public class PhoneAuth extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Intent intent = new Intent(PhoneAuth.this, MainActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(intent);
                             finish();
-
-                            FirebaseUser user = task.getResult().getUser();
                             // Update UI
                         } else {
                             // Sign in failed, display a message and update the UI

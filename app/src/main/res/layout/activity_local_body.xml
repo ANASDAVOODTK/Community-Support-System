@@ -109,46 +109,116 @@
 
             </LinearLayout>
 
-
-            <ImageView
-                android:id="@+id/imgfemale"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_female" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgfemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_female" />
+
+                <TextView
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
+
+
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imgChildren"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_children" />
+                android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imgAdult"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_adult" />
+                <ImageView
+                    android:id="@+id/imgchildren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_children" />
 
-            <ImageView
-                android:id="@+id/imgAged"
+                <TextView
+                    android:id="@+id/children"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-30dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_aged" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/adult1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_adult" />
+
+                <TextView
+                    android:id="@+id/adult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/aged1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/ic_aged" />
+
+                <TextView
+                    android:id="@+id/aged"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="10dp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
-
 
     </com.google.android.material.textfield.TextInputLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

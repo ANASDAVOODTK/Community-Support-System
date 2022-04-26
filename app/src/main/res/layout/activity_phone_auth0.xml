@@ -60,7 +60,7 @@
         android:textColor="@color/textColor1"
         android:textFontWeight="500"
         android:textStyle="bold"
-        android:textSize="20dp"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
