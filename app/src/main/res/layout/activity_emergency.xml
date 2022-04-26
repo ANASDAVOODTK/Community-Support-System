@@ -138,31 +138,28 @@
 
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/sos"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="540dp"
-        app:backgroundTint="@color/teal_200"
-        app:cornerRadius="@android:dimen/app_icon_size"
-        android:id="@+id/sos"
+        android:fontFamily="@font/montserrat_medium"
         android:text="Send SOS Signal"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:layout_marginBottom="28dp"
         android:textColor="@color/mainColor"
         android:textFontWeight="500"
-        android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="18dp"
-        android:textAlignment="textStart"
+        app:backgroundTint="@color/teal_200"
+        app:cornerRadius="64dp"
         app:icon="@drawable/ic_rarrow"
         app:iconGravity="end"
-        app:iconSize="30dp"
+        app:iconSize="18dp"
         app:iconTint="@color/mainColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </com.google.android.material.button.MaterialButton>
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
