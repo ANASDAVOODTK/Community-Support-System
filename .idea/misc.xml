@@ -14,7 +14,15 @@
         <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_local_body.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_main.xml" value="0.21981981981981982" />
         <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_profile.xml" value="0.21981981981981982" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/activity_add_profile.xml" value="0.3722543352601156" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/activity_emergency.xml" value="0.4" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/activity_profile.xml" value="0.6" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/activity_waste_bin.xml" value="0.21981981981981982" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/notification_item.xml" value="0.21981981981981982" />
+        <entry key="..\:/college/Project/app/src/main/res/layout/slider_layout.xml" value="0.21981981981981982" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
