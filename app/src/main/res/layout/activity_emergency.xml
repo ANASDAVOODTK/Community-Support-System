@@ -136,15 +136,31 @@
             android:fontFamily="@font/montserrat_medium" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/imgGo"
-        android:layout_width="361dp"
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="560dp"
+        android:layout_marginTop="540dp"
+        app:backgroundTint="@color/teal_200"
+        app:cornerRadius="@android:dimen/app_icon_size"
+        android:id="@+id/sos"
+        android:text="Send SOS Signal"
+        android:textColor="@color/mainColor"
+        android:textFontWeight="500"
+        android:fontFamily="@font/montserrat_semi_bold"
+        android:textSize="18dp"
+        android:textAlignment="textStart"
+        app:icon="@drawable/ic_rarrow"
+        app:iconGravity="end"
+        app:iconSize="30dp"
+        app:iconTint="@color/mainColor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_go" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.button.MaterialButton>
+
+
 
 
 
