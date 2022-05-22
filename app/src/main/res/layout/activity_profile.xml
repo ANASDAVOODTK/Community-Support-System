@@ -55,7 +55,7 @@
         android:textFontWeight="400"
         android:textColor="@color/white"
 
-        android:text="Maxwell's equations the foundation of classical electromagnetism."
+        android:text="Keep profiles of your family members updated"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtlogin" />
