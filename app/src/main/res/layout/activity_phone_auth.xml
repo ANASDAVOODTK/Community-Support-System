@@ -67,6 +67,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtOtp"
             android:inputType="phone"
+            android:imeOptions="actionDone"
             android:fontFamily="@font/montserrat_medium"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -133,5 +134,18 @@
         app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
         app:layout_constraintTop_toTopOf="@+id/textInputLayout" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/anim" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

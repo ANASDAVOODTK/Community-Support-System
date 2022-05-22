@@ -51,7 +51,7 @@
         android:textSize="24sp"
         android:fontFamily="@font/montserrat_bold"
         android:textFontWeight="700"
-        android:text="55%"
+        android:text="-----%"
         app:layout_constraintEnd_toEndOf="@+id/imgWasteBin"
         app:layout_constraintStart_toStartOf="@+id/imgWasteBin"
         app:layout_constraintTop_toTopOf="@+id/imgWasteBin" />

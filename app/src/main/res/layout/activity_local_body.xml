@@ -51,6 +51,7 @@
             android:id="@+id/txtfname1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Maxwell's equations—the foundation of classical electromagnetism."
             android:fontFamily="@font/montserrat_medium"
             android:minHeight="48dp" />
 
@@ -161,10 +162,10 @@
                     android:id="@+id/children"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
                     android:layout_gravity="center"
-                    android:layout_marginTop="-30dp"/>
+                    android:layout_marginTop="-30dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="1000" />
 
             </LinearLayout>
 
@@ -221,4 +222,16 @@
         </LinearLayout>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/anim" />
 </androidx.constraintlayout.widget.ConstraintLayout>
