@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_adult.xml" value="0.2225" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_aged.xml" value="0.2225" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_children.xml" value="0.2225" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_female.xml" value="0.2225" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_houses.xml" value="0.2395" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_males.xml" value="0.2395" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_rarrow.xml" value="0.2225" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_awarness.xml" value="0.1111111111111111" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_emergency.xml" value="0.2" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_local_body.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_main.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_messaging.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_profile.xml" value="0.21981981981981982" />
+      </map>
+    </option>
+  </component>
+</project>
