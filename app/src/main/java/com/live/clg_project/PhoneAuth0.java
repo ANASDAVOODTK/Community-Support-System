@@ -8,7 +8,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,9 +59,10 @@ public class PhoneAuth0 extends AppCompatActivity {
 
                 {
 
-                    SharedPreferences sharedPref = PhoneAuth0.this.getPreferences(Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPref.edit();
-                    editor.putString("Mobile", mobile);
+                    SharedPreferences pref = getSharedPreferences("Name", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putString("Mobile",mobile);
+                    editor.putString("Name",fullName);
                     editor.apply();
 
 
@@ -68,6 +71,41 @@ public class PhoneAuth0 extends AppCompatActivity {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        txtMobile.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    String fullName = Objects.requireNonNull(txtFullName.getText()).toString();
+                    String mobile = Objects.requireNonNull(txtMobile.getText()).toString();
+
+                    if(fullName.isEmpty())
+                    {
+                        Toast.makeText(PhoneAuth0.this, "Please Enter Your Name", Toast.LENGTH_SHORT).show();
+                    }
+                    else if(mobile.isEmpty())
+                    {
+                        Toast.makeText(PhoneAuth0.this, "Please Enter Your Mobile", Toast.LENGTH_SHORT).show();
+                    }
+                    else
+
+                    {
+
+                        SharedPreferences pref = getSharedPreferences("Name", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = pref.edit();
+                        editor.putString("Mobile",mobile);
+                        editor.putString("Name",fullName);
+                        editor.apply();
+
+
+                        Intent intent = new Intent(PhoneAuth0.this,PhoneAuth.class);
+                        intent.putExtra("Mobile", mobile);
+                        startActivity(intent);
+                    }
+                }
+                return false;
             }
         });
 

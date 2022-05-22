@@ -30,6 +30,7 @@ public class SplashActivity extends AppCompatActivity {
         try
         {
             userId= FirebaseAuth.getInstance().getCurrentUser().getUid();
+            Log.d("wwwwwwwwwwwwwww",userId);
         }
         catch (Exception e)
         {

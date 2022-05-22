@@ -3,22 +3,45 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_adult.xml" value="0.2225" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_aged.xml" value="0.2225" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_children.xml" value="0.2225" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_female.xml" value="0.2225" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_houses.xml" value="0.2395" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_males.xml" value="0.2395" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/drawable/ic_rarrow.xml" value="0.2225" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_awarness.xml" value="0.1111111111111111" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_emergency.xml" value="0.2" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_local_body.xml" value="0.21981981981981982" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_main.xml" value="0.21981981981981982" />
-        <entry key="..\:/Users/Administrator/Desktop/college-project/app/src/main/res/layout/activity_profile.xml" value="0.21981981981981982" />
-        <entry key="..\:/Users/Public/Downloads/college-project/app/src/main/res/layout/activity_emergency.xml" value="0.1" />
-        <entry key="..\:/Users/Public/Downloads/college-project/app/src/main/res/layout/activity_local_body.xml" value="0.25416666666666665" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/border.xml" value="0.2815" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_go2.xml" value="0.1415" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_kannada.xml" value="0.1905" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_launcher_background.xml" value="0.142" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_localbody.xml" value="0.234" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_profile.xml" value="0.1955" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_sos.xml" value="0.234" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastbin.xml" value="0.2815" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastbin1.xml" value="0.2815" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastbin2.xml" value="0.2815" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastbin3.xml" value="0.2815" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastbin4.xml" value="0.2815" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastebinsmall2.xml" value="0.1955" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastebinsmall3.xml" value="0.1955" />
+        <entry key="..\:/ClgProject/app/src/main/res/drawable/ic_wastebinsmall4.xml" value="0.1955" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_add_profile.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_awarness.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_emergency.xml" value="0.33" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_local_body.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_main2.xml" value="0.25" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_messaging.xml" value="0.25" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_phone_auth.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_phone_auth0.xml" value="0.3022508038585209" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_profile.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_splash.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/activity_waste_bin.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/image_slider_layout_item.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/notificationItem.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/notification_item.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/profile_item.xml" value="0.31351351351351353" />
+        <entry key="..\:/ClgProject/app/src/main/res/layout/slider_layout.xml" value="0.31351351351351353" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
 </project>

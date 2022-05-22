@@ -107,6 +107,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:id="@+id/txtMobile"
+            android:imeOptions="actionDone"
             android:inputType="phone"
             android:fontFamily="@font/montserrat_medium"
             android:layout_height="wrap_content" />

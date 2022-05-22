@@ -4,17 +4,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -28,6 +33,7 @@ import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class PhoneAuth extends AppCompatActivity {
@@ -46,6 +52,7 @@ public class PhoneAuth extends AppCompatActivity {
     ImageView imgGoOtp,imgBack;
     TextView txtChangeMobile,txtCountDown,txtResendOtp;
     boolean isReadyOtp = false;
+    LottieAnimationView animationView ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,7 @@ public class PhoneAuth extends AppCompatActivity {
         txtCountDown = findViewById(R.id.txtCountDown);
         txtResendOtp = findViewById(R.id.txtResendOtp);
         imgBack = findViewById(R.id.imgBack);
+        animationView = findViewById(R.id.anim);
         String Mobile = getIntent().getStringExtra("Mobile");
 
         imgBack.setOnClickListener(new View.OnClickListener() {
@@ -160,8 +168,21 @@ public class PhoneAuth extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                animationView.setVisibility(View.VISIBLE);
                 String Otp = txtOtp.getText().toString();
                 verifyPhoneNumberWithCode(mVerificationId, Otp);
+            }
+        });
+
+        txtOtp.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
+                    String Otp = txtOtp.getText().toString();
+                    animationView.setVisibility(View.VISIBLE);
+                    verifyPhoneNumberWithCode(mVerificationId, Otp);
+                }
+                return false;
             }
         });
 
@@ -223,6 +244,7 @@ public class PhoneAuth extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            animationView.setVisibility(View.GONE);
                             // Sign in success, update UI with the signed-in user's information
                             Intent intent = new Intent(PhoneAuth.this, MainActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
