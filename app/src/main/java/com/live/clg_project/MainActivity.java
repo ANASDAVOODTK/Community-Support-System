@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     String url3 = "https://www.niti.gov.in/sites/default/files/2021-08/swach-bharat.jpg";
     String url4 = "https://www.fda.gov/files/how-you-can-make-a-difference-1600x900.png";
 
+    private static final String ONESIGNAL_APP_ID = "334257a3-cea1-483e-94b9-038c0c218aa1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
         txtLocation=findViewById(R.id.txtlogin);
 
+        // Enable verbose OneSignal logging to debug issues if needed.
+        OneSignal.setLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
+
+        // OneSignal Initialization
+        OneSignal.initWithContext(this);
+        OneSignal.setAppId(ONESIGNAL_APP_ID);
 
         imgAwareness.setOnClickListener(new View.OnClickListener() {
             @Override

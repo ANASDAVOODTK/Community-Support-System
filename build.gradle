@@ -4,13 +4,12 @@ buildscript {
     repositories {
         // Check that you have the following line (if not, add it):
         google()  // Google's Maven repository
-        maven {
-            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
-        }
-
+        mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.14.0'
 
     }
 }
@@ -21,4 +20,11 @@ plugins {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
