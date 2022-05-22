@@ -151,7 +151,9 @@ public class MainActivity extends AppCompatActivity {
         myAsyncTasks.execute();
     }
 
-    public class MyAsyncTasks extends AsyncTask<String, String, String> {
+
+
+        public class MyAsyncTasks extends AsyncTask<String, String, String> {
         String url1 =  "https://spector.padippist.tech/items/Slider_info";
         @Override
         protected void onPreExecute() {

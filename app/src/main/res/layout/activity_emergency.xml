@@ -63,11 +63,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/LoginTextInputLayoutStyle">
+
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/txtfname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_height="wrap_content" />
+            android:minHeight="48dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,10 +91,11 @@
         app:shapeAppearance="@style/LoginTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/txtHouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_height="wrap_content" />
+            android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -109,11 +112,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         app:shapeAppearance="@style/LoginTextInputLayoutStyle">
+
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/txtHaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_height="wrap_content" />
+            android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
