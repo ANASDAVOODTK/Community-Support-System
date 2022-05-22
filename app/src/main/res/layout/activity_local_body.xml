@@ -16,7 +16,7 @@
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back" />
+        app:srcCompat="@drawable/ic_back"/>
 
     <TextView
         android:id="@+id/txtlogin"
@@ -51,6 +51,7 @@
             android:id="@+id/txtfname1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Local body information system available to public disclosure"
             android:fontFamily="@font/montserrat_medium"
             android:minHeight="48dp" />
 
@@ -64,13 +65,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imghouses"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     app:srcCompat="@drawable/ic_houses" />
 
                 <TextView
@@ -78,8 +79,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginStart="-10dp"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
                     android:layout_marginTop="-30dp"/>
 
             </LinearLayout>
@@ -87,13 +89,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imgmale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_males" />
 
@@ -102,23 +104,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginStart="-10dp"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
                     android:layout_marginTop="-30dp"
-                    android:layout_marginStart="10dp"/>
+                    />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/imgfemale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="18dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_female" />
 
@@ -127,10 +130,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginStart="-10dp"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
                     android:layout_marginTop="-30dp"
-                    android:layout_marginStart="10dp"/>
+                    />
 
             </LinearLayout>
 
@@ -162,8 +166,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
                     android:layout_marginTop="-30dp"/>
 
             </LinearLayout>
@@ -186,10 +190,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
                     android:layout_gravity="center"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginTop="-30dp"/>
 
             </LinearLayout>
 
@@ -211,14 +215,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1000"
-                    android:fontFamily="@font/montserrat_bold"
                     android:layout_gravity="center"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginStart="10dp"/>
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginTop="-30dp"/>
 
             </LinearLayout>
 
         </LinearLayout>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/anim" />
 </androidx.constraintlayout.widget.ConstraintLayout>

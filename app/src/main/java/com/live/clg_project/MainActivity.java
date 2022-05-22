@@ -12,13 +12,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.LocationManager;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,21 +42,32 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.live.clg_project.Model.NotificationData;
 import com.live.clg_project.Model.SliderData;
+import com.live.clg_project.Model.UsersData;
 import com.smarteist.autoimageslider.SliderView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class MainActivity extends AppCompatActivity {
     ImageView imgSos,imgMessage,imgWaste,imgProfile,imgAwareness,imgLocalBody;
     TextView txtLocation;
     private LocationRequest locationRequest;
-    String url1 = "https://kafkageridonusum.com/Dosyalar/Hizmet/tehlikesiz-atik-geri-kazanim_54.jpg";
-    String url2 = "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/09/doctor-giving-boy-covid-19-vaccine-facemask-1296x728-header.jpg?w=1155&h=1528";
-    String url3 = "https://www.niti.gov.in/sites/default/files/2021-08/swach-bharat.jpg";
-    String url4 = "https://www.fda.gov/files/how-you-can-make-a-difference-1600x900.png";
-
+    ArrayList<SliderData> sliderDataArrayList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,42 +141,91 @@ public class MainActivity extends AppCompatActivity {
         locationRequest.setFastestInterval(2000);
         getCurrentLocation();
         Notification();
+        isUseraddedHisProfile();
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
+
+        MyAsyncTasks myAsyncTasks = new MyAsyncTasks();
+        myAsyncTasks.execute();
     }
+
+
+
+        public class MyAsyncTasks extends AsyncTask<String, String, String> {
+        String url1 =  "https://spector.padippist.tech/items/Slider_info";
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            // display a progress dialog for good user experiance
+        }
+        @Override
+        protected String doInBackground(String... params) {
+            // implement API in background and store the response in current variable
+            String current = "";
+            try {
+                URL url;
+                HttpURLConnection urlConnection = null;
+                try {
+                    url = new URL(url1);
+                    urlConnection = (HttpURLConnection) url.openConnection();
+                    InputStream in = urlConnection.getInputStream();
+                    InputStreamReader isw = new InputStreamReader(in);
+                    int data = isw.read();
+                    while (data != -1) {
+                        current += (char) data;
+                        data = isw.read();
+                        // System.out.print(current);
+                    }
+                    Log.d("datalength",""+current.length());
+                    // return the data to onPostExecute method
+                    return current;
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (urlConnection != null) {
+                        urlConnection.disconnect();
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return "Exception: " + e.getMessage();
+            }
+            return current;
+        }
+        @Override
+        protected void onPostExecute(String s) {
+            try {
+                JSONObject jsonObject = new JSONObject(s);
+                JSONArray jsonArray1 = jsonObject.getJSONArray("data");
+                for(int i = 0; i < jsonArray1.length(); i++)
+                {
+                    String d0 = String.valueOf(jsonArray1.getJSONObject(i).getString("image"));
+                    String d1 = String.valueOf(jsonArray1.getJSONObject(i).getString("title"));
+                    String d2 = String.valueOf(jsonArray1.getJSONObject(i).getString("sub_title"));
+                    String d3 = String.valueOf(jsonArray1.getJSONObject(i).getString("description"));
+                    sliderDataArrayList.add(new SliderData(d0,d1,d2,d3));
+
+                }
+                slider();
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 
     public void slider()
     {
-        // we are creating array list for storing our image urls.
-        ArrayList<SliderData> sliderDataArrayList = new ArrayList<>();
-
-        // initializing the slider view.
         SliderView sliderView = findViewById(R.id.imageSlider);
-
-        // adding the urls inside array list
-        sliderDataArrayList.add(new SliderData(url1,"Smart Waste Management","Technology is helping us to .... "));
-        sliderDataArrayList.add(new SliderData(url2,"Recommended Vaccines for Adults","Immunizations are not just for children ...."));
-        sliderDataArrayList.add(new SliderData(url3,"Swachh Bharat Mission","March 28th @Alleppey Beach"));
-        sliderDataArrayList.add(new SliderData(url4,"Covid Protective measures","Get vaccinated as soon as ..."));
-
-        // passing this array list inside our adapter class.
         SliderAdapter adapter = new SliderAdapter(this, sliderDataArrayList);
-
-        // below method is used to set auto cycle direction in left to
-        // right direction you can change according to requirement.
         sliderView.setAutoCycleDirection(SliderView.LAYOUT_DIRECTION_LTR);
-
-        // below method is used to
-        // setadapter to sliderview.
         sliderView.setSliderAdapter(adapter);
-
-        // below method is use to set
-        // scroll time in seconds.
         sliderView.setScrollTimeInSec(3);
-
-        // to set it scrollable automatically
-        // we use below method.
         sliderView.setAutoCycle(true);
-
-        // to start autocycle below method is used.
         sliderView.startAutoCycle();
     }
 
@@ -327,6 +391,54 @@ public class MainActivity extends AppCompatActivity {
         isEnabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         return isEnabled;
 
+    }
+
+
+
+    public void isUseraddedHisProfile()
+    {
+        SharedPreferences pref = getSharedPreferences("Name", Context.MODE_PRIVATE);
+        String phone = pref.getString("Mobile","");
+        Log.d("fssdfdsfsdf",phone);
+
+
+        Methods methods = RetrofitClient.getRetrofitInstance().create(Methods.class);
+        Call<UsersData> call = methods.getAllData(phone);
+
+        call.enqueue(new Callback<UsersData>() {
+            @Override
+            public void onResponse(Call<UsersData> call, Response<UsersData> response) {
+
+                Log.d("tttttttttttt","code:  "+response.code());
+
+                ArrayList<UsersData.data> data = response.body().getData();
+
+                if(data.size()==0)
+                {
+                    Intent intent = new Intent(MainActivity.this,AddProfile.class);
+                    startActivity(intent);
+                }
+
+
+
+                Log.d("tttttttttttt","code:  "+data.size());
+                for(UsersData.data data1: data)
+                {
+                    if (data1.getPhone().equals(""))
+                    {
+                        Intent intent = new Intent(MainActivity.this,AddProfile.class);
+                      // startActivity(intent);
+                    }
+                }
+
+
+            }
+
+            @Override
+            public void onFailure(Call<UsersData> call, Throwable t) {
+
+            }
+        });
     }
 
 

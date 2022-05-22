@@ -34,15 +34,17 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="30dp"
+        android:lineHeight="26dp"
         android:fontFamily="@font/montserratregular"
         android:text="Emergency Login helps you to report an issue within seconds"
         android:textColor="@color/white"
         android:textFontWeight="400"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -61,11 +63,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shapeAppearance="@style/LoginTextInputLayoutStyle">
+
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/txtfname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_height="wrap_content" />
+            android:minHeight="48dp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,10 +91,11 @@
         app:shapeAppearance="@style/LoginTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/txtHouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_height="wrap_content" />
+            android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -107,11 +112,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         app:shapeAppearance="@style/LoginTextInputLayoutStyle">
+
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/txtHaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_medium"
-            android:layout_height="wrap_content" />
+            android:minHeight="48dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -136,31 +143,48 @@
             android:fontFamily="@font/montserrat_medium" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <TextView
+        android:id="@+id/txtChangePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Help?"
+        android:textColor="@color/textColor1"
+        android:textFontWeight="500"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/sos"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="540dp"
-        app:backgroundTint="@color/teal_200"
-        app:cornerRadius="@android:dimen/app_icon_size"
-        android:id="@+id/sos"
+        android:fontFamily="@font/montserrat_medium"
         android:text="Send SOS Signal"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:layout_marginBottom="28dp"
         android:textColor="@color/mainColor"
         android:textFontWeight="500"
-        android:fontFamily="@font/montserrat_semi_bold"
         android:textSize="18dp"
-        android:textAlignment="textStart"
+        app:backgroundTint="@color/teal_200"
+        app:cornerRadius="64dp"
         app:icon="@drawable/ic_rarrow"
         app:iconGravity="end"
-        app:iconSize="30dp"
+        app:iconSize="18dp"
         app:iconTint="@color/mainColor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </com.google.android.material.button.MaterialButton>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

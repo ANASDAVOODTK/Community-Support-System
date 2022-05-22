@@ -43,12 +43,12 @@ public class SliderAdapter extends SliderViewAdapter<SliderAdapter.SliderAdapter
         // Glide is use to load image
         // from url in your imageview.
         Glide.with(viewHolder.itemView)
-                .load(sliderItem.getImgUrl())
+                .load("https://spector.padippist.tech/assets/"+sliderItem.getImage()+".png")
                 .centerCrop()
                 .into(viewHolder.imageViewBackground);
 
         viewHolder.txtTitle.setText(sliderItem.getTitle());
-        viewHolder.txtSubtitle.setText(sliderItem.getSubTile());
+        viewHolder.txtSubtitle.setText(sliderItem.getSub_title());
 
     }
 
