@@ -7,6 +7,16 @@
 ## Aim 
     The main aim of our project is to make the communication among the houses and with the local body feasible and reliable during natural calamities along with waste management.
 
+
+<p float="left">
+ <img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Login.png" width="256"/>
 <img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Home.png?raw=true" width="256"/>
-<img src="[https://github.com/ANASDAVOODTK/college-project/blob/main/Home.png?raw=true](https://github.com/ANASDAVOODTK/college-project/blob/main/l2%20(1)%201.png?raw=true)"/>
+<img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Awareness.png" width="256"/>
+</p>
+<p float="left">
+ <img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Waste%20bin%20fill.png" width="256"/>
+<img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Add%20Members.png" width="256"/>
+<img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Localbody.png" width="256"/>
+</p>
+<img src="https://github.com/ANASDAVOODTK/college-project/blob/main/l2%20(1)%201.png"/>
 
