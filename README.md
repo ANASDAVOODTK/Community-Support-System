@@ -7,6 +7,6 @@
 ## Aim 
     The main aim of our project is to make the communication among the houses and with the local body feasible and reliable during natural calamities along with waste management.
 
-![alt text](https://github.com/ANASDAVOODTK/college-project/blob/main/Home.png?raw=true)
+<img src="https://github.com/ANASDAVOODTK/college-project/blob/main/Home.png?raw=true" width="256"/>
 ![alt text](https://github.com/ANASDAVOODTK/college-project/blob/main/l2%20(1)%201.png?raw=true) 
 
