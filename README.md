@@ -6,3 +6,6 @@
 
 ## Aim 
     The main aim of our project is to make the communication among the houses and with the local body feasible and reliable during natural calamities along with waste management.
+
+
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
