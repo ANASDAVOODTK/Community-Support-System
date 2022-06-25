@@ -20,3 +20,5 @@
 </p>
 <img src="https://github.com/ANASDAVOODTK/college-project/blob/main/l2%20(1)%201.png"/>
 
+## [Admin Panel Code](https://github.com/user/repo/blob/branch/other_file.md)
+
